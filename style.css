@@ -8,6 +8,12 @@ body {
     background-color: rgb(35, 56, 56);
 }
 
+#btn-new {
+    margin: 8px auto;
+    display: block;
+    font-size: 24px;
+}
+
 #container {
     margin: 0 auto;
     width: 960px;
