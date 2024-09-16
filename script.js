@@ -9,8 +9,9 @@ for (let i = 0; i < SIZE; i++) {
     for (let j = 0; j < SIZE; j++) {
         let square = document.createElement("div");
         square.className = "square";
+        square.addEventListener("mouseenter", () => { square.classList.toggle("filled")});
         row.appendChild(square);
     }
-    
+
     container.appendChild(row);
 }

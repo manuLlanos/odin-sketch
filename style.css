@@ -24,6 +24,6 @@ body {
     width: 60px;
 }
 
-.square:hover {
-    background-color: lightslategray;
+.square.filled {
+    background-color: black;
 }
