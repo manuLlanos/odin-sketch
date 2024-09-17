@@ -14,7 +14,7 @@ function createCanvas(size) {
             square.className = "square";
             square.style.height = `${Math.floor(WIDTH / size)}px`;
             square.style.width = `${Math.floor(WIDTH / size)}px`;
-            square.addEventListener("mouseenter", () => { square.style.backgroundColor = getRandomColorString()});
+            square.addEventListener("mouseenter", () => { square.style.backgroundColor = getRandomColorString() });
             row.appendChild(square);
         }
 
@@ -28,7 +28,7 @@ function askUserForSize() {
     do {
         sizeInput = parseInt(prompt("Canvas size? (max:100)", "16"));
     }
-    while(sizeInput < 0 || sizeInput > 100);
+    while (sizeInput < 0 || sizeInput > 100);
 
     deleteRows();
 
@@ -37,14 +37,13 @@ function askUserForSize() {
 }
 
 function deleteRows() {
-    while(container.firstChild) {
-        console.log("h");
+    while (container.firstChild) {
         container.removeChild(container.firstChild);
     }
 }
 
 function random(n) {
-    return Math.floor(Math.random() * n); 
+    return Math.floor(Math.random() * n);
 }
 
 function getRandomColorString() {
