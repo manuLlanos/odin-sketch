@@ -24,6 +24,10 @@ body {
     display: flex;
 }
 
+.square {
+    flex-grow: 1;
+}
+
 .square.filled {
     background-color: black;
 }
