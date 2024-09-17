@@ -14,7 +14,7 @@ function createCanvas(size) {
             square.className = "square";
             square.style.height = `${Math.floor(WIDTH / size)}px`;
             square.style.width = `${Math.floor(WIDTH / size)}px`;
-            square.addEventListener("mouseenter", () => { square.classList.toggle("filled") });
+            square.addEventListener("mouseenter", () => { square.style.backgroundColor = getRandomColorString()});
             row.appendChild(square);
         }
 
@@ -41,6 +41,17 @@ function deleteRows() {
         console.log("h");
         container.removeChild(container.firstChild);
     }
+}
+
+function random(n) {
+    return Math.floor(Math.random() * n); 
+}
+
+function getRandomColorString() {
+    let red = random(256);
+    let blue = random(256);
+    let green = random(256);
+    return `rgb(${red},${blue},${green})`;
 }
 
 newCanvasButton.addEventListener("click", askUserForSize);
